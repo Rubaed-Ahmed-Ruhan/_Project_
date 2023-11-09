@@ -29,16 +29,16 @@ void insert()
         node *temp,*prev;
         temp=createnode();
         int value1;
-        printf("\n\t\tEnter the first name:- ");  
+        printf("\n\t\tEnter the first name:- ");
         scanf("%s",temp->name);
 
-    printf("\n\t\tEnter the last name:- ");  
+    printf("\n\t\tEnter the last name:- ");
         scanf("%s",temp->lastName);
 
 
         printf("\n\t\tEnter the Savings number:- ");
         scanf("%d",&value1);
-        
+
         int flag=0;
         node *search;
         search=start;
@@ -64,7 +64,7 @@ void insert()
         }
 
         if(flag==0)
-        {       
+        {
                 temp->savingNumber=value1;
                 fflush(stdin);
                 printf("\n\t\tEnter your profession:- ");
@@ -74,7 +74,7 @@ void insert()
                 scanf("%s",temp->address);
                 fflush(stdin);
 
-                
+
                 printf("\n\t\tDo you want credit or debit card ?   :- For Yes press 1 , otherwise press 2:- ");
                 int option;
                 scanf("%d", &option);
@@ -90,9 +90,9 @@ void insert()
                         temp->balance = 0;
                         temp->fix = 0;
                 }
-                
 
-                
+
+
                 int acc=rand()%989785;
                 printf("\n\t\tUnique bank ac id. is %d\n",acc);
                 temp->ac=acc;
@@ -118,7 +118,7 @@ void widraw()
         int value1;
         printf("\n\t\tEnter the Savings no.:- ");
         scanf("%d",&value1);
-        
+
         int flag=0;
         node *search;
         search=start;
@@ -141,7 +141,7 @@ void widraw()
                         }
                 }
         }
-        
+
         if(flag==1)
         {
                 node *t=search;
@@ -156,7 +156,7 @@ void widraw()
                 }
                 else
                         printf("\n\t\tEnter a valid limit\n");
-                        
+
         }
         else
         {
@@ -171,7 +171,7 @@ void deposit()
         int value1;
         printf("\n\t\tEnter the Savings number:- ");
         scanf("%d",&value1);
-        
+
         int flag=0;
         node *search;
         search=start;
@@ -194,7 +194,7 @@ void deposit()
                         }
                 }
         }
-        
+
         if(flag=1)
         {
                 node *t=search;
@@ -209,12 +209,12 @@ void deposit()
                 }
                 else
                         printf("\n\t\tEnter a valid limit\n");
-                        
+
         }
         else
         {
                 printf("\nNo id. exists\n");
-                
+
         }
 }
 
@@ -223,7 +223,7 @@ void fix()
         int value1;
         printf("\n\t\tEnter the Savings number:- ");
         scanf("%d",&value1);
-        
+
         int flag=0;
         node *search;
         search=start;
@@ -246,7 +246,7 @@ void fix()
                         }
                 }
         }
-        
+
         if(flag=1)
         {
                 node *t=search;
@@ -264,9 +264,9 @@ void fix()
         else
         {
                 printf("\nNo id. exists\n");
-                
+
         }
-        
+
 }
 
 
@@ -317,7 +317,7 @@ void view()
         int value1;
         printf("\n\t\tEnter the Savings number:- ");
         scanf("%d",&value1);
-        
+
         int flag=0;
         node *search;
         search=start;
@@ -341,7 +341,7 @@ void view()
                         }
                 }
         }
-        
+
         if(flag=1)
         {
                 node *view=search;
@@ -375,11 +375,11 @@ void view()
 
 void close()
 {
-        
+
         int value1;
         printf("\n\t\tEnter the Savings number:- ");
         scanf("%d",&value1);
-        
+
         int flag=0;
         node *search;
         search=start;
@@ -410,13 +410,13 @@ void close()
                 if(t->next==NULL)
                 {
                         printf("\n\t\tNo account exists\n");
-                
+
                 }
                 else
                 {
                         node *link;
                         link=t->next;
-        
+
                         if(t->next==NULL)
                         {
                                 prev->next=NULL;
@@ -428,9 +428,9 @@ void close()
                         free(t);
                         printf("\n\t\tAccount deleted\n");
                 }
-                
+
         }
-        
+
 }
 
 int menu()
@@ -451,7 +451,7 @@ int menu()
 int main()
 {
         printf("\n WELCOME TO DIU BANKING SYSTEM\n\n");
-        printf("\n DEVELOPED BY AZAM,SADMAN,AZIM,RAJIN AND PRITU\n\n");
+        printf("\n DEVELOPED BY RUHAN,AKIB,RODELA AND ALO\n\n");
         while(1)
         {
                 switch(menu())
@@ -478,9 +478,9 @@ int main()
                                 viewlist();
                                 break;
                         case 0:
-                                printf("\n\t\tProject by Sadman , Azam , Rashed, Azim, Pritu");
+                                printf("\n\t\tProject by Ruhan , Akib , Rodela, Alo");
                                 exit(1);
-                                
+
                                 break;
                         default:
                                 printf("\nENTER A VALID CHOICE");
